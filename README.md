@@ -9,8 +9,11 @@ npm i -D html-webpack-plugin html-loader
 npm i -D webpack-dev-server
 npm install -D babel-loader @babel/core @babel/preset-env
 
-//for loading images:
-npm i -D file-loader 
+**file-loader is DEPRECATED!!! -> USE Asset Modules instead, file-loader does not work with html-loader**
+
+`npm i -D file-loader`
+
+see https://webpack.js.org/migrate/5/   
 
 Start http server:
 joachim@acer:~/conovum/webpacktut/src$ nodemon ../node_modules/http-server/bin/http-server

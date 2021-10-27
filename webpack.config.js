@@ -8,17 +8,20 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
     mode: 'development',
+    output: {
+        assetModuleFilename: '[name].[ext]'
+    },
     module: {
         rules: [
-            // {
-            //     test: /\.html$/,
-            //     use: [
-            //         {
-            //             loader : "html-loader",
-            //             options : {minimize: true}
-            //         }
-            //     ]
-            // },
+            {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader : "html-loader",
+                        options : {minimize: true}
+                    }
+                ]
+            },
             {
                 test: /\.scss$/,
                 use: [
@@ -38,15 +41,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g|gif)$/i,
-                use: [
-                  {
-                    loader: 'file-loader',
-                    options: {
-                        //name: './images/[name].[ext]'
-                        name: '[name].[ext]'
-                    }
-                  },
-                ],
+                type: 'asset/resource'
             },
         ]
     },

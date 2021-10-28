@@ -8,9 +8,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
     mode: 'development',
-    output: {
-        assetModuleFilename: '[name].[ext]'
-    },
+    // output: {
+    //     assetModuleFilename: '[name].[ext]',
+    //     path : resolve(__dirname, 'dist')
+    // },
     module: {
         rules: [
             {

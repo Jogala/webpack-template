@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "http-server": "^14.0.0",
+    "lodash": "^4.17.21",
     "url-loader": "^4.1.1"
   }
 }
